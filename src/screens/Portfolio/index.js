@@ -1,12 +1,14 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {styles} from './style';
-
+import {Main} from '../';
 const Portfolio = () => {
   return (
-    <View style={styles.container}>
-      <Text>Portfolio Ahihihi</Text>
-    </View>
+    <Main>
+      <View>
+        <Text>Portfolio Ahihihi</Text>
+      </View>
+    </Main>
   );
 };
 

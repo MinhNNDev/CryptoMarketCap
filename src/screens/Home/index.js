@@ -1,13 +1,15 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {styles} from './style';
-
-function Home() {
+import {Main} from '../';
+const Home = () => {
   return (
-    <View style={styles.container}>
-      <Text>Home Ahihihi</Text>
-    </View>
+    <Main>
+      <View>
+        <Text>Home Ahihihi</Text>
+      </View>
+    </Main>
   );
-}
+};
 
 export default Home;
