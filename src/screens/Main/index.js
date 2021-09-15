@@ -33,6 +33,12 @@ const Main = ({isTradeModalVisible, children}) => {
   return (
     <View style={styles.container}>
       {children}
+      {/* Overlay  */}
+      {isTradeModalVisible && (
+        <Animated.View style={styles.overlay} opacity={modalAnimatedValue} />
+      )}
+
+      {/* Modal */}
       <Animated.View style={[styles.animated, {top: modalY}]}>
         <IconTextButton
           label="Transfer"
