@@ -6,7 +6,6 @@ import {
 } from '../actions/coinActions';
 
 const initialState = {
-  myHoldings: [],
   coins: [],
   error: null,
   loading: false,
@@ -22,7 +21,7 @@ const coin = (state = initialState, action) => {
     case GET_COIN_MARKET_SUCCESS:
       return {
         ...state,
-        myHoldings: action.payload.coins,
+        coins: action.payload.coins,
       };
     case GET_COIN_MARKET_FAILURE:
       return {

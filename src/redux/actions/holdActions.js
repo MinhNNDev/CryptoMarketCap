@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {getHeader} from '../../api/Service';
 
 export const GET_HOLDING_BEGIN = 'GET_HOLDING_BEGIN';
 export const GET_HOLDING_SUCCESS = 'GET_HOLDING_SUCCESS';
@@ -9,9 +8,9 @@ export const getHoldingBegin = () => ({
   type: GET_HOLDING_BEGIN,
 });
 
-export const getHoldingSuccess = myHolding => ({
+export const getHoldingSuccess = myHoldings => ({
   type: GET_HOLDING_SUCCESS,
-  payload: {myHolding},
+  payload: {myHoldings},
 });
 
 export const getHoldingFailure = error => ({
@@ -46,7 +45,7 @@ export const getHoldings = (
       },
     })
       .then(res => {
-        console.log('GET HOLDING: ', res);
+        // console.log('GET HOLDING: ', res);
         if (res.status === 200) {
           let myHoldings = res.data.map(item => {
             let coin = holdings.find(a => a.id === item.id);

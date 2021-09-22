@@ -7,7 +7,6 @@ import {
 
 const initialState = {
   myHoldings: [],
-  coins: [],
   error: null,
   loading: false,
 };

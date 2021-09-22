@@ -39,7 +39,7 @@ export const getCoinMarket = (
       },
     })
       .then(res => {
-        console.log('$ = COIN: ', res);
+        // console.log('$ = COIN: ', res);
         if (res.status === 200) {
           dispatch(getCoinMarketSuccess(res.data));
         } else {
